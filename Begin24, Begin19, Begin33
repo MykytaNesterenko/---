@@ -1,0 +1,75 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+    cout.setf(ios::fixed);
+    cout << setprecision(4);
+
+    cout << "=== Завдання Begin19 ===" << endl;
+    cout << "Введiть число A (дiйсне):" << endl;
+    double A_val;
+    cin >> A_val;
+
+    double b, c;
+    b = A_val * A_val;       // A^2
+    c = b * A_val;           // A^3
+    b = c * b;               // A^5
+    c = b * b;               // A^10
+    double A15 = c * b;      // A^15
+
+    cout << "A^15 = " << A15 << endl;
+    return 0;
+}
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+    cout.setf(ios::fixed);
+    cout << setprecision(4);
+
+    cout << "=== Завдання Begin33 ===" << endl;
+    cout << "Введiть сторону куба a (дiйсне число):" << endl;
+    double a;
+    cin >> a;
+
+    double S1 = a * a;             // площа гранi
+    double surface = 6.0 * S1;     // площа поверхнi куба
+    double ratio = (S1 == 0.0) ? 0.0 : (surface / S1);
+
+    cout << "Площа гранi S1 = " << S1 << endl;
+    cout << "Площа поверхнi куба = " << surface << endl;
+    cout << "Вiдношення площi поверхнi до площi гранi = " << ratio << endl;
+
+    return 0;
+}
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+    cout.setf(ios::fixed);
+    cout << setprecision(4);
+
+    cout << "=== Завдання Begin24 ===" << endl;
+    cout << "Введiть X (кг цукерок) та A (вартiсть у грн) через пробiл:" << endl;
+
+    double X, A;
+    cin >> X >> A;
+
+    if (X == 0.0) {
+        cout << "Помилка: X не повинно бути нулем." << endl;
+    } else {
+        double price_per_kg = A / X;
+        cout << "1 кг коштує (грн): " << price_per_kg << endl;
+
+        cout << "Введiть Y (скiльки кг потрiбно обчислити):" << endl;
+        double Y;
+        cin >> Y;
+
+        double cost_Y = price_per_kg * Y;
+        cout << Y << " кг коштують (грн): " << cost_Y << endl;
+    }
+    return 0;
+}
